@@ -12,9 +12,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'food-check-in',
-    loadChildren: () => import('./screens/food-check-in/food-check-in.module').then( m => m.FoodCheckInPageModule)
+    path: 'detail',
+    loadChildren: () => import('./screens/detail/detail.module').then( m => m.DetailPageModule)
   },
+
 ];
 
 @NgModule({

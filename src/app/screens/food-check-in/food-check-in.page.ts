@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/category.model';
+import { Food } from 'src/app/models/food.model';
+import { FoodService } from 'src/app/services/food.service';
 
 @Component({
   selector: 'app-food-check-in',
@@ -8,12 +10,13 @@ import { Category } from 'src/app/models/category.model';
 })
 export class FoodCheckInPage implements OnInit {
   categories: Category[] = [];
+  foods: Food[] = [];
 
-  constructor() { }
+  constructor(private foodSer: FoodService) { }
 
   ngOnInit() {
     this.getCategories();
-    console.log(this.categories);
+    this.foods = this.foodSer.getFoods();
   }
 
   getCategories() {
@@ -29,21 +32,21 @@ export class FoodCheckInPage implements OnInit {
         id: 2,
         label: 'mlawi2',
         image: 'assets/images/foods/fried.png',
-        active: true,
+        active: false,
       },
 
       {
         id: 3,
         label: 'mlawi3',
         image: 'assets/images/foods/fried.png',
-        active: true,
+        active: false,
       },
 
       {
         id: 4,
         label: 'mlawi4',
         image: 'assets/images/foods/fried.png',
-        active: true,
+        active: false,
       }
     ];
   }

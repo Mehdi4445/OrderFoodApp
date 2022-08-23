@@ -13,4 +13,9 @@
     <app-category-item *ngFor = "let item of categories" [item]="item"></app-category-item>
   </div>
 
+  <h1 class="list-header">Select the order</h1>
+  <div class="food-list">
+    <app-food-card *ngFor="let food of foods" [item]="food"></app-food-card>
+  </div>
+
 </ion-content>

@@ -6,7 +6,22 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-  }
+    children: [
+      {
+        path: 'food-check-in',
+        loadChildren: () => import('../screens/food-check-in/food-check-in.module').then( m => m.FoodCheckInPageModule),
+      },
+      {
+        path: 'cart',
+        loadChildren: () => import('../screens/cart/cart.module').then( m => m.CartPageModule),
+      },
+      {
+        path:'',
+        redirectTo: 'food-check-in',
+        pathMatch:'full',
+      },
+    ],
+  },
 ];
 
 @NgModule({

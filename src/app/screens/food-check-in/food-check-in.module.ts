@@ -9,6 +9,7 @@ import { FoodCheckInPageRoutingModule } from './food-check-in-routing.module';
 import { FoodCheckInPage } from './food-check-in.page';
 import { SearchbarModule } from 'src/app/components/searchbar/searchbar.module';
 import { CategoryItemModule } from 'src/app/components/category-item/category-item.module';
+import { FoodCardModule } from 'src/app/components/food-card/food-card.module';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { CategoryItemModule } from 'src/app/components/category-item/category-it
     FoodCheckInPageRoutingModule,
     SearchbarModule,
     CategoryItemModule,
+    FoodCardModule,
   ],
   declarations: [FoodCheckInPage]
 })
