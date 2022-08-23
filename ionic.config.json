@@ -1,5 +1,7 @@
 {
   "name": "OrderFoodApp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

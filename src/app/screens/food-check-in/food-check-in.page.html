@@ -1,0 +1,16 @@
+<ion-content>
+  <div class="header">
+    <h1>Food Check In</h1>
+      <div class="avatar">
+        <ion-img src="assets\images\icons\menu.png"></ion-img>
+      </div>
+  </div>
+
+  <app-searchbar></app-searchbar>
+
+  <div class="categories">
+    
+    <app-category-item *ngFor = "let item of categories" [item]="item"></app-category-item>
+  </div>
+
+</ion-content>
