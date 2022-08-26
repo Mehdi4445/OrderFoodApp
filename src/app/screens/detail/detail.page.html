@@ -1,9 +1,24 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>detail</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+
+  <div class="header">
+    <ion-buttons>
+      <ion-button routerLink="/home/food-check-in">
+        <ion-icon slot="icon-only" color="light" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons>
+      <ion-button>
+        <ion-icon slot="icon-only" color="light" name="d-heart"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </div>
+
+  <div class="card">
+    <div class="image">
+      <ion-img [src]="food.image"></ion-img>
+    </div>
+  </div>
 
 </ion-content>

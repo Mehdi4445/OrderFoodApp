@@ -5,8 +5,8 @@ import { FoodCardComponent } from './food-card.component';
 
 
 @NgModule({
+    declarations: [FoodCardComponent],
     imports: [CommonModule, IonicModule],
     exports: [FoodCardComponent],
-    declarations: [FoodCardComponent]
 })
 export class FoodCardModule { }

@@ -3,7 +3,7 @@ import { Food } from '../models/food.model';
 
 @Injectable({providedIn: 'root'})
 export class FoodService {
-    getFoods(): Food[]{
+    getFoods(): Food[] {
         return [
             {
                 id: 1,
@@ -44,7 +44,7 @@ export class FoodService {
         ];
     }
 
-    /*getFood(id: number): Food{
-        return this.getFoods().find((food) -> FoodService.id = id);
-    }*/
+    getFood(id: number): Food {
+        return this.getFoods().find((food) => food.id = id);
+    }
 }
