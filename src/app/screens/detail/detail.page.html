@@ -19,6 +19,16 @@
     <div class="image">
       <ion-img [src]="food.image"></ion-img>
     </div>
+
+    <div class="card-content">
+      <div class="card-title">
+        <h1 class="ion-no-margin">{{food.title}}</h1>
+        <p class="ion-no-margin"><sup>TND</sup>{{food.price | number: '1.2'}}</p>
+      </div>
+    </div>
+
+
+
   </div>
 
 </ion-content>
