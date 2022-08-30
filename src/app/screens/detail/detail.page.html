@@ -7,11 +7,6 @@
       </ion-button>
     </ion-buttons>
 
-    <ion-buttons>
-      <ion-button>
-        <ion-icon slot="icon-only" color="light" name="d-heart"></ion-icon>
-      </ion-button>
-    </ion-buttons>
 
   </div>
 
@@ -27,7 +22,12 @@
       </div>
     </div>
 
+    <div class="about">
+      <h1>Order content</h1>
+      <p>{{ food.content }}</p>
+    </div>
 
+    <app-button (click)="addItemToCart()">Finish order</app-button>
 
   </div>
 

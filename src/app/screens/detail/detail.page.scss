@@ -58,7 +58,22 @@ ion-content {
                 }
             }
 
-        }
+    
 
+        }
+        .about{
+            margin-bottom: 2.5rem;
+
+            h1{
+                font-weight: bolder;
+                color: #6b45bc;
+            }
+
+            p{
+                font-size: 1.1rem;
+                line-height: 1.6;
+                color: #ffb800;
+            }
+        }
     }
 }
