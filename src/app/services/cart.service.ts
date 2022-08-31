@@ -1,18 +1,11 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { CartItem } from '../models/cart-item.model';
+import { map } from 'rxjs/operators';
 
 @Injectable({providedIn: 'root'})
 export class CartService {
-    private items$ = new BehaviorSubject<CartItem[]>([ {
-        id: 1,
-        title: 'mlawi',
-        price: 15,
-        image: 'assets/images/foods/fried.png',
-        content: ['frite','hrissa','bsal'],
-        quantity: 1,
-        ingridient: [1,2,0]
-    }]);
+    private items$ = new BehaviorSubject<CartItem[]>([]);
 
     getCart(){
         return this.items$.asObservable();
@@ -23,5 +16,23 @@ export class CartService {
     }
     removeItem(id: number) {
         this.items$.next(this.items$.getValue().filter((item) => item.id !== id));
+    }
+
+    changeQty(quantity: number, id: number){
+        const items = this.items$.getValue();
+        const index = items.findIndex((item) => item.id === id);
+        items[index].quantity += quantity;
+        this.items$.next(items);
+    }
+
+    getTotalAmount() {
+        return this.items$.pipe(map((items) => {
+            let total = 0;
+            items.forEach((item) => {
+                total += item.quantity * item.price;
+            });
+            return total;
+        })
+        );
     }
 }
