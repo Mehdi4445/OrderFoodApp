@@ -4,7 +4,15 @@ import { CartItem } from '../models/cart-item.model';
 
 @Injectable({providedIn: 'root'})
 export class CartService {
-    private items$ = new BehaviorSubject<CartItem[]>([]);
+    private items$ = new BehaviorSubject<CartItem[]>([ {
+        id: 1,
+        title: 'mlawi',
+        price: 15,
+        image: 'assets/images/foods/fried.png',
+        content: ['frite','hrissa','bsal'],
+        quantity: 1,
+        ingridient: [1,2,0]
+    }]);
 
     getCart(){
         return this.items$.asObservable();

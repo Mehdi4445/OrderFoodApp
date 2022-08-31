@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { FoodService } from 'src/app/services/food.service';
+import { AlertController } from '@ionic/angular';
+import { Observable } from 'rxjs';
+import { CartItem } from 'src/app/models/cart-item.model';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -9,14 +11,37 @@ import { FoodService } from 'src/app/services/food.service';
 })
 export class CartPage implements OnInit {
 
-  id: number;
+  cartItem$: Observable<CartItem[]>;
 
-  constructor(private activatedRoute: ActivatedRoute, private foodService: FoodService) {
-    this.id = +this.activatedRoute.snapshot.paramMap.get('id');
+  constructor(private cartService: CartService, private alertCtrl: AlertController) {
    }
 
   ngOnInit() {
-    console.log(this.foodService.getFood(this.id));
+    this.cartItem$ = this.cartService.getCart();
+
   }
+
+  onIncrease(item: CartItem){}
+
+  onDecrease(item: CartItem){}
+
+  async removeFromCart(item: CartItem){
+    const alert = this.alertCtrl.create({
+      header: 'Remove',
+      message: 'Remove order ?',
+      buttons: [
+        {
+          text: 'Yes',
+          handler: () => this.cartService.removeItem(item.id),
+        },
+        {
+          text: 'No',
+        },
+      ],
+    });
+
+    (await alert).present();
+  }
+
 
 }
