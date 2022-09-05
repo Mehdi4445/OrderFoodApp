@@ -12,12 +12,16 @@ import { FoodService } from 'src/app/services/food.service';
 export class FoodCheckInPage implements OnInit {
   categories: Category[] = [];
   foods: Food[] = [];
+  err: '';
 
   constructor(private foodService: FoodService, private router: Router) { }
 
   ngOnInit() {
     this.getCategories();
     this.foods = this.foodService.getFoods();
+    /*this.foodService.getFoods().subscribe(
+      data => this.foods = data, error => this.err = error
+    );*/
   }
 
   getCategories() {

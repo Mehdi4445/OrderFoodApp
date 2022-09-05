@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { Observable } from 'rxjs/internal/Observable';
 import { CartItem } from 'src/app/models/cart-item.model';
 import { Food } from 'src/app/models/food.model';
+import { Ingridient } from 'src/app/models/ingridient.model';
 import { CartService } from 'src/app/services/cart.service';
 import { FoodService } from 'src/app/services/food.service';
 
@@ -13,9 +15,12 @@ import { FoodService } from 'src/app/services/food.service';
 })
 export class DetailPage implements OnInit {
 
+  @Input() ingri: Ingridient;
+  @Output() increase = new EventEmitter();
+  @Output() decrease = new EventEmitter();
+
   id: number;
   food: Food;
-  ingridient: number[];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -28,7 +33,16 @@ export class DetailPage implements OnInit {
 
   ngOnInit() {
     this.food = this.foodService.getFood(this.id);
-    console.log(this.food);
+  }
+
+  increaseQty(index: any, qty: number){
+    const cont = this.food.content;
+    index.qty += qty;
+  }
+
+  decreaseQty(index: any, qty: number){
+    const cont = this.food.content;
+    index.qty += qty;
   }
 
   addItemToCart(){
@@ -39,7 +53,6 @@ export class DetailPage implements OnInit {
       image: this.food.image,
       quantity: 1,
       content: this.food.content,
-      ingridient: this.ingridient
     };
 
     this.cartService.addToCart(cartitem);

@@ -3,5 +3,5 @@ export interface Food{
     title: string;
     price: number;
     image?: string;
-    content: string[];
+    content: any;
 }

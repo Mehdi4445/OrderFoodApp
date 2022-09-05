@@ -1,0 +1,16 @@
+[
+    {"id" : 1, "title" : "mlawi", "price" : 15, "image" : "assets/images/foods/fried.png", 
+    "content": [
+                {"name" :"frite", "price" : 1, "image": "assets/images/foods/chicken.png"}, 
+                {"name" :"ed", "price" : 5, "image": "assets/images/foods/chicken.png" }, 
+                {"name" :"rre", "price" : 7, "image": "assets/images/foods/fried.png" }
+                ]},
+    {"id" : 2, "title" : "malfouf", "price" : 5, "image" : "assets/images/foods/chicken.png", 
+                "content": [
+                            {"name" :"bsal", "price" : 4, "image": "assets/images/foods/chicken.png"}, 
+                            {"name" :"fff", "price" : 22, "image": "assets/images/foods/fried.png" }, 
+                            {"name" :"rrfsdde", "price" : 66, "image": "assets/images/foods/fried.png" }
+                            ]}
+
+
+]

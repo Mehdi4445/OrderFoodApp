@@ -24,11 +24,38 @@
 
     <div class="about">
       <h1>Order content</h1>
-      <p>{{ food.content }}</p>
+
+      
+
+      <div class="cart-item" *ngFor="let content of this.food.content; let index as i">
+        <div class="image">
+          <ion-img [src]="content.image"></ion-img>
+        </div>
+      
+        <div class="description">
+          <h3>{{content.name }}</h3>
+          <p><sup>TND</sup> {{content.price }}</p>
+        </div>
+      
+        <div class="description">
+          <ion-buttons>
+            <ion-button (click)="increaseQty(index, 1)">
+              <ion-icon slot="icon-only" name="add"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+      <div class="counter">{{ content.qty }}</div>
+          <ion-buttons>
+            <ion-button *ngIf="content.qty > 0" (click)="decreaseQty(index, -1)">
+              <ion-icon slot="icon-only" name="remove"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </div>
+      </div>
     </div>
 
     <app-button (click)="addItemToCart()">Finish order</app-button>
 
   </div>
+  
 
 </ion-content>
