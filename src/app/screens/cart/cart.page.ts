@@ -13,6 +13,7 @@ export class CartPage implements OnInit {
 
   cartItem$: Observable<CartItem[]>;
   totalAmount$: Observable<number>;
+  ingri: any;
 
   constructor(private cartService: CartService, private alertCtrl: AlertController) {
    }
@@ -20,6 +21,19 @@ export class CartPage implements OnInit {
   ngOnInit() {
     this.cartItem$ = this.cartService.getCart();
     this.totalAmount$ = this.cartService.getTotalAmount();
+
+
+
+    /*console.log(this.cartItem$);
+    this.cartItem$.subscribe((val) => {
+      this.ingri = val;
+      console.log(this.ingri);
+
+    }, (error) => {
+      console.log(error);
+
+    });*/
+
 
   }
 

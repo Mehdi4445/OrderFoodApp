@@ -63,7 +63,7 @@ export class DetailPage implements OnInit {
     const toast = await this.toastCtrl.create({
       message: 'order added',
       mode: 'ios',
-      duration: 1000,
+      duration: 100,
     position: 'top',
     });
 
