@@ -22,19 +22,6 @@ export class CartPage implements OnInit {
     this.cartItem$ = this.cartService.getCart();
     this.totalAmount$ = this.cartService.getTotalAmount();
 
-
-
-    /*console.log(this.cartItem$);
-    this.cartItem$.subscribe((val) => {
-      this.ingri = val;
-      console.log(this.ingri);
-
-    }, (error) => {
-      console.log(error);
-
-    });*/
-
-
   }
 
   onIncrease(item: CartItem){

@@ -40,73 +40,10 @@ export class FoodService {
                 content: [
                     {name :'frite', price : 1, image: 'assets/images/foods/chicken.png', qty: 1},
                     {name :'bsal', price : 5, image: 'assets/images/foods/fried.png', qty: 1},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png', qty: 1},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png', qty: 1},
-                    {name :'frite', price : 1, image: 'assets/images/foods/chicken.png', qty: 1},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png', qty: 1}
-                    ]
-
-            },/*
-            {
-                id: 3,
-                title: 'fricassé',
-                price: 1,
-                image: 'assets/images/foods/fried.png',
-                content: [
-                    {name :'frite', price : 1, image: 'assets/images/foods/chicken.png'},
-                    {name :'bsal', price : 5, image: 'assets/images/foods/fried.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'},
-                    {name :'frite', price : 1, image: 'assets/images/foods/chicken.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'}
+                    {name :'omellete', price : 4, image: 'assets/images/foods/chicken.png', qty: 1},
                     ]
 
             },
-            {
-                id: 4,
-                title: 'Ara Ara',
-                price: 9999,
-                image: 'assets/images/foods/fried.png',
-                content: [
-                    {name :'frite', price : 1, image: 'assets/images/foods/chicken.png'},
-                    {name :'bsal', price : 5, image: 'assets/images/foods/fried.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'},
-                    {name :'frite', price : 1, image: 'assets/images/foods/chicken.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'}
-                    ]
-
-            },
-            {
-                id: 5,
-                title: 'djej',
-                price: 9999,
-                image: 'assets/images/foods/chicken.png',
-                content: [
-                    {name :'frite', price : 1, image: 'assets/images/foods/chicken.png'},
-                    {name :'bsal', price : 5, image: 'assets/images/foods/fried.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'},
-                    {name :'frite', price : 1, image: 'assets/images/foods/chicken.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'}
-                    ]
-
-            },
-            {
-                id: 6,
-                title: 'Ara Ara2',
-                price: 9999,
-                image: 'assets/images/foods/fried.png',
-                content: [
-                    {name :'frite', price : 1, image: 'assets/images/foods/chicken.png'},
-                    {name :'bsal', price : 5, image: 'assets/images/foods/fried.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'},
-                    {name :'frite', price : 1, image: 'assets/images/foods/chicken.png'},
-                    {name :'mayo', price : 4, image: 'assets/images/foods/chicken.png'}
-                    ]
-
-            },*/
         ];
     }
 

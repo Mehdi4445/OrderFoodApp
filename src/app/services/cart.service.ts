@@ -32,11 +32,14 @@ export class CartService {
     getTotalAmount() {
         return this.items$.pipe(map((items) => {
             let total = 0;
-            items.forEach((item) => {
-                total += item.quantity * item.price;
-            });
-            return total;
-        })
+            items.forEach((item, index) => {
+                // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
+                item.content.forEach(function(childrenEntry) {
+                    total += childrenEntry.qty * childrenEntry.price;
+                    });
+                    });
+                return total;
+            })
         );
     }
 }

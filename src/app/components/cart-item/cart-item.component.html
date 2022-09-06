@@ -7,11 +7,8 @@
     <h3>{{ item.title }}</h3>
     <div *ngFor="let content of this.item.content; let i = index">
       {{item.content[i].qty}}x {{item.content[i].name}}
-      
-      
-
   </div>
-    <p><sup>TND</sup>{{ item.price | number:'1.2'}}</p>
+    <p><sup></sup></p>
   </div>
 
   <div class="description">
