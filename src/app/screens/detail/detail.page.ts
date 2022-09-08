@@ -21,6 +21,7 @@ export class DetailPage implements OnInit {
 
   id: number;
   food: Food;
+  q: number;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -33,6 +34,7 @@ export class DetailPage implements OnInit {
 
   ngOnInit() {
     this.food = this.foodService.getFood(this.id);
+    this.q = this.food.quantity;
   }
 
   increaseQty(index: any, qty: number){
@@ -45,13 +47,23 @@ export class DetailPage implements OnInit {
     index.qty += qty;
   }
 
+  increaseQ(q: number){
+   this.food.quantity += q;
+
+  }
+
+  decreaseQ(q: number){
+    this.food.quantity -= q;
+
+   }
+
   addItemToCart(){
     const cartitem: CartItem = {
       id: this.food.id,
       title: this.food.title,
       price: this.food.price,
       image: this.food.image,
-      quantity: 1,
+      quantity: this.food.quantity,
       content: this.food.content,
     };
 

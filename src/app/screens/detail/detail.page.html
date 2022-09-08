@@ -15,10 +15,25 @@
       <ion-img [src]="food.image"></ion-img>
     </div>
 
+
     <div class="card-content">
       <div class="card-title">
         <h1 class="ion-no-margin">{{food.title}}</h1>
       </div>
+    </div>
+
+    <div style="display:flex ;">
+      <ion-buttons>
+        <ion-button (click)="increaseQ(q)">
+          <ion-icon slot="icon-only" name="add"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  <div style="margin-left:2px ; margin-right: 2px;">{{ food.quantity }}</div>
+      <ion-buttons *ngIf="food.quantity > 0" (click)="decreaseQ(q)">
+        <ion-button >
+          <ion-icon slot="icon-only" name="remove"></ion-icon>
+        </ion-button>
+      </ion-buttons>
     </div>
 
     <div class="about">

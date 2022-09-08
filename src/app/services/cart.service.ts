@@ -35,7 +35,7 @@ export class CartService {
             items.forEach((item, index) => {
                 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
                 item.content.forEach(function(childrenEntry) {
-                    total += childrenEntry.qty * childrenEntry.price;
+                    total += (childrenEntry.qty * childrenEntry.price) * item.quantity;
                     });
                     });
                 return total;

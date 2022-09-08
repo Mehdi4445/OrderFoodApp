@@ -9,4 +9,12 @@ export class HomePage {
 
   constructor() {}
 
+  onToggleColorTheme(event){
+    if(event.detail.checked){
+      document.body.setAttribute('color-theme', 'dark');
+    } else {
+      document.body.setAttribute('color-theme', 'light');
+    }
+
+  }
 }

@@ -27,6 +27,7 @@ export class FoodService {
                 title: 'mlawi',
                 price: 15,
                 image: 'assets/images/foods/fried.png',
+                quantity: 1,
                 content: [
                     {id: 7, name :'frite', price : 1, image: 'assets/images/foods/chicken.png', qty: 1},
                     {id: 2,name :'bsal', price : 5, image: 'assets/images/foods/fried.png', qty: 1}
@@ -37,6 +38,7 @@ export class FoodService {
                 title: 'malfUwUf',
                 price: 5,
                 image: 'assets/images/foods/chicken.png',
+                quantity: 1,
                 content: [
                     {name :'frite', price : 1, image: 'assets/images/foods/chicken.png', qty: 1},
                     {name :'bsal', price : 5, image: 'assets/images/foods/fried.png', qty: 1},

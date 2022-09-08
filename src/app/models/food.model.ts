@@ -3,5 +3,6 @@ export interface Food{
     title: string;
     price: number;
     image?: string;
+    quantity: number;
     content: any;
 }
