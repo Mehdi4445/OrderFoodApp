@@ -41,7 +41,7 @@ export class CartPage implements OnInit {
       buttons: [
         {
           text: 'Yes',
-          handler: () => this.cartService.removeItem(item.id),
+          handler: () => this.cartService.removeItem(item.notes),
         },
         {
           text: 'No',

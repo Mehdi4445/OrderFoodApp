@@ -17,10 +17,10 @@ export class CartService {
     addToCart(newItem: CartItem){
         this.items$.next([ ... this.items$.getValue(), newItem]);
     }
-    removeItem(id: number) {
-        this.items$.next(this.items$.getValue().filter((item) => item.id !== id));
-    }
+    removeItem(notes: string) {
+        this.items$.next(this.items$.getValue().filter((item) => item.notes !== notes));
 
+    }
 
     changeQty(quantity: number, id: number){
         const items = this.items$.getValue();
