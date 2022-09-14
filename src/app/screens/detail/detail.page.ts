@@ -22,6 +22,7 @@ export class DetailPage implements OnInit {
   id: number;
   food: Food;
   q: number;
+  notes: string;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -65,6 +66,7 @@ export class DetailPage implements OnInit {
       image: this.food.image,
       quantity: this.food.quantity,
       content: this.food.content,
+      notes: this.notes
     };
 
     this.cartService.addToCart(cartitem);

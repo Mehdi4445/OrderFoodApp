@@ -4,10 +4,11 @@
   </div>
 
   <div class="description">
-    <h3>{{ item.title }}</h3>
+   <div  style="display: flex;"><div *ngIf="item.quantity > 1"><h3>{{ item.quantity }}x&nbsp; </h3> </div> <div><h3>{{ item.title }}</h3></div></div> 
     <div *ngFor="let content of this.item.content; let i = index">
-      {{item.content[i].qty}}x {{item.content[i].name}}
+      <div *ngIf="item.content[i].qty > 0">{{item.content[i].qty}}x {{item.content[i].name}}</div>
   </div>
+  <h4 style="color: #ffb800;">Notes : </h4>{{ item.notes }}
     <p><sup></sup></p>
   </div>
 

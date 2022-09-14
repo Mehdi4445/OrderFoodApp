@@ -5,5 +5,6 @@ export interface CartItem{
     image?: string;
     quantity: number;
     content: any;
+    notes: string;
 
 }
